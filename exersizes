@@ -1,0 +1,81 @@
+require "pry"
+#exersize 1
+  puts "exersize 1"
+  first_name = "pat"
+  last_name = "james"
+  full_name = first_name + last_name
+  puts full_name
+  
+#exersize 2
+  puts "\n exersize 2"
+  mynumber = 6536
+  puts "mynumber is #{mynumber}"
+  thousands = mynumber / 1000
+  mynumber = mynumber % 1000
+  hundreds = mynumber / 100
+  mynumber = mynumber % 100
+  tens = mynumber / 10 
+  mynumber = mynumber % 10
+  ones = mynumber
+  
+  
+  puts "number of thousands is #{thousands}"
+  puts "number of hundreds is #{hundreds}"
+  puts "number of tens is #{tens}"
+  puts "number of ones is #{ones}"
+  
+#exersize 3 - using hash
+  puts "\n exersize 3"
+  movies = {first_movie: 1924,
+             second_movie: 1956,
+             third_movie: 1977,
+             fourth_movie: 1998,
+             fifth_movie: 2006 }
+             
+  puts movies[:first_movie]
+  puts movies[:second_movie]
+  puts movies[:third_movie]
+  puts movies[:fourth_movie]
+  puts movies[:fifth_movie]   
+  
+#exersize 4 - array
+  puts "\n exersize 4"
+  movies = {first_movie: 1924,
+             second_movie: 1956,
+             third_movie: 1977,
+             fourth_movie: 1998,
+             fifth_movie: 2006 }
+             
+  movie_array = []
+  movies.each do |title, year| 
+    movie_array.push(year)
+  end
+  puts "#{movie_array} \n"
+           
+  
+  
+#exersize 5 - calculate factorials
+  puts "exersize 5 calculating factorials"
+  number =[5,6,7,8]
+
+  number.each do |num|
+    puts " Calculating the factorial for #{num}"
+    answer = num
+    num -= 1
+    while  num > 0
+      answer = answer * num
+      num -= 1
+    end
+    puts "Answer is #{answer} \n \n"
+  end
+  
+#exersize 6 - calaculate the square of 3 float numbers
+  puts "Exersize 6 - calculating the square of three numbers"
+  numbers = [3.4, 13, 342]
+  numbers.each do |num|
+    puts "Square of #{num} is #{ num * num }"
+  end
+
+
+  #exersize 7 - what does the error message mean
+  # It means that in line 2 of the code ruby intrepreter was expecting a right brachet instead it read a right curly bracket
